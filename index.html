@@ -1,0 +1,781 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>TG Gallery Mobile</title>
+        <style>
+            * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+            body{ margin:0; background:#0a0a0a; color:#eee; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; overflow-x: hidden; }
+            
+            /* 加载状态 */
+            .loading { 
+                position: fixed; 
+                top: 50%; 
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                color: #00ffcc; 
+                font-size: 16px;
+                z-index: 10000;
+            }
+            
+            /* 顶部固定栏 - 移动端优化 */
+            .header-fixed { 
+                position: sticky; 
+                top:0; 
+                z-index: 999; 
+                background: rgba(10,10,10,0.92); 
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border-bottom: 0.5px solid #333;
+            }
+            
+            /* 搜索栏 - 移动端适配 */
+            .search-bar{ 
+                padding: 8px 12px; 
+                display: flex; 
+                align-items: center; 
+                gap: 8px; 
+                flex-wrap: wrap;
+            }
+            #searchInput { 
+                flex: 1; 
+                background: #1a1a1a; 
+                border: 0.5px solid #333; 
+                color: #fff; 
+                padding: 10px 14px; 
+                border-radius: 25px; 
+                outline: none; 
+                font-size: 14px; 
+                min-width: 120px;
+                -webkit-appearance: none;
+            }
+            #searchInput:focus { border-color: #00ffcc; }
+            #searchInput::placeholder { color: #666; font-size: 13px; }
+            
+            /* 标签区域 - 移动端优化 */
+            .tag-wrapper { 
+                position: relative; 
+                padding: 0 12px 8px; 
+            }
+            .tag-list-container { 
+                display: flex; 
+                flex-wrap: wrap; 
+                gap: 6px; 
+                max-height: 34px; 
+                overflow: hidden; 
+                transition: max-height 0.3s ease; 
+                padding-right: 70px;
+            }
+            .tag-list-container.expanded { 
+                max-height: 250px; 
+                overflow-y: auto;
+                padding-bottom: 5px;
+            }
+            
+            .list-tag { 
+                background: #1a1a1a; 
+                color: #aaa; 
+                padding: 5px 12px; 
+                border-radius: 20px; 
+                font-size: 12px; 
+                cursor: pointer; 
+                border: 0.5px solid #333; 
+                transition: 0.2s; 
+                white-space: nowrap;
+                touch-action: manipulation;
+            }
+            .list-tag:active { transform: scale(0.96); }
+            .list-tag.active { background: #00ffcc; color: #000; font-weight: bold; border-color: #00ffcc; }
+            
+            .toggle-btn { 
+                position: absolute; 
+                right: 12px; 
+                top: 0; 
+                background: #1a1a1a; 
+                color: #00ffcc; 
+                padding: 5px 10px; 
+                border-radius: 20px; 
+                cursor: pointer; 
+                font-size: 11px; 
+                border: 0.5px solid #333;
+                touch-action: manipulation;
+            }
+            .toggle-btn:active { background: #2a2a2a; }
+            
+            /* 按钮样式 - 移动端优化 */
+            .btn, .btn-primary, .show-timeline-btn {
+                background: #1a1a1a;
+                color: #ccc;
+                padding: 8px 14px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 12px;
+                white-space: nowrap;
+                border: 0.5px solid #333;
+                transition: 0.2s;
+                touch-action: manipulation;
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+            }
+            .btn:active, .btn-primary:active, .show-timeline-btn:active { 
+                background: #2a2a2a; 
+                transform: scale(0.97);
+            }
+            .btn-primary { background: #00aa88; color: #fff; border-color: #00ccaa; }
+            .btn-primary:active { background: #00cc99; }
+
+            /* 时间导航栏 - 移动端优化 */
+            .timeline-nav-container { 
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                background: rgba(0,0,0,0.6);
+                border-top: 0.5px solid #333;
+                border-bottom: 0.5px solid #333;
+            }
+            .timeline-nav-container.show {
+                max-height: 180px;
+                overflow-y: auto;
+            }
+            .timeline-nav { 
+                padding: 10px 12px; 
+                overflow-x: auto; 
+                white-space: nowrap; 
+                scrollbar-width: thin;
+                -webkit-overflow-scrolling: touch;
+            }
+            .timeline-nav::-webkit-scrollbar { height: 3px; }
+            .nav-item { 
+                display: inline-block; 
+                padding: 6px 14px; 
+                margin: 0 4px; 
+                background: #1a1a1a; 
+                color: #aaa; 
+                border-radius: 25px; 
+                font-size: 12px; 
+                cursor: pointer; 
+                border: 0.5px solid #333;
+                touch-action: manipulation;
+            }
+            .nav-item:active { transform: scale(0.96); background: #2a2a2a; }
+            .nav-item.active { background: #00ffcc; color: #000; }
+
+            /* 瀑布流 - 移动端2列布局 */
+            .grid { 
+                column-count: 2; 
+                column-gap: 6px; 
+                padding: 8px;
+            }
+            @media (min-width: 500px) {
+                .grid { column-count: 3; column-gap: 8px; padding: 10px; }
+            }
+            @media (min-width: 800px) {
+                .grid { column-count: 4; }
+            }
+            @media (min-width: 1200px) {
+                .grid { column-count: 5; }
+            }
+            
+            /* 卡片 - 移动端优化 */
+            .card { 
+                break-inside: avoid; 
+                margin-bottom: 8px; 
+                background: #121212; 
+                border-radius: 12px; 
+                overflow: hidden; 
+                border: 0.5px solid #222;
+                transition: 0.2s;
+            }
+            .card:active { transform: scale(0.98); }
+            
+            .card-img-link { display: block; overflow: hidden; }
+            .card img { 
+                width: 100%; 
+                display: block; 
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            
+            .info { 
+                padding: 8px 10px; 
+                font-size: 10px; 
+                color: #666; 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                border-bottom: 0.5px solid #222;
+            }
+            .origin-link { color: #00ffcc; text-decoration: none; font-weight: 500; font-size: 10px; }
+            
+            .tags { 
+                padding: 8px 10px; 
+                font-size: 10px; 
+                color: #00ccaa;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+            .tagItem { 
+                cursor: pointer; 
+                background: rgba(0,255,204,0.08); 
+                padding: 3px 8px; 
+                border-radius: 12px; 
+                display: inline-block; 
+                font-size: 9px;
+                touch-action: manipulation;
+            }
+            .tagItem:active { background: rgba(0,255,204,0.2); transform: scale(0.96); }
+            
+            /* 卡片内超链接 */
+            .extra-links { 
+                padding: 6px 10px 10px; 
+                border-top: 0.5px dashed #222; 
+                background: #0e0e0e; 
+            }
+            .extra-links a { 
+                display: block; 
+                color: #55aaff; 
+                font-size: 10px; 
+                text-decoration: none; 
+                margin-top: 6px; 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                white-space: nowrap;
+                padding: 4px 0;
+            }
+            
+            /* 回到顶部按钮 - 移动端优化 */
+            #topBtn { 
+                position: fixed; 
+                bottom: 16px; 
+                right: 16px; 
+                background: #00aa88; 
+                color: #fff; 
+                width: 44px; 
+                height: 44px; 
+                border-radius: 50%; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                cursor: pointer; 
+                z-index: 9999; 
+                transition: 0.2s;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                font-size: 20px;
+                touch-action: manipulation;
+            }
+            #topBtn:active { transform: scale(0.92); background: #00cc99; }
+            
+            .hide { display: none !important; }
+            
+            .stats { 
+                font-size: 11px; 
+                color: #00ffcc; 
+                background: #1a1a1a;
+                padding: 4px 10px;
+                border-radius: 20px;
+                white-space: nowrap;
+            }
+            
+            /* 公告 - 移动端优化 */
+            .toast-notification {
+                position: fixed;
+                top: 70px;
+                right: 12px;
+                left: 12px;
+                background: rgba(0,0,0,0.92);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                color: #00ffcc;
+                padding: 12px 16px;
+                border-radius: 12px;
+                font-size: 12px;
+                z-index: 10000;
+                border-left: 3px solid #00ffcc;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+                animation: slideIn 0.3s ease;
+                pointer-events: none;
+                text-align: center;
+            }
+            @keyframes slideIn {
+                from { transform: translateY(-20px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; visibility: hidden; }
+            }
+            .toast-fadeout { animation: fadeOut 0.4s ease forwards; }
+            
+            /* 搜索提示隐藏（移动端节省空间） */
+            .search-hint { display: none; }
+            
+            /* 滚动条隐藏（移动端更美观） */
+            .tag-list-container::-webkit-scrollbar,
+            .timeline-nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* 刷新按钮 */
+            .refresh-btn {
+                background: #1a1a1a;
+                color: #00ffcc;
+                padding: 8px 12px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 12px;
+                border: 0.5px solid #333;
+                touch-action: manipulation;
+            }
+            .refresh-btn:active { background: #2a2a2a; }
+        </style>
+    </head>
+    <body>
+        <div class="loading" id="loading">📂 加载数据中...</div>
+        
+        <div class="header-fixed" style="display: none;" id="header">
+            <div class="search-bar">
+                <span class="btn" onclick="resetAll()">全部</span>
+                <span class="btn btn-primary" onclick="showLast7Days()">📅 近7天</span>
+                <input type="text" id="searchInput" placeholder="搜索标签..." oninput="doSearch()">
+                <span class="stats" id="stats"></span>
+                <span class="show-timeline-btn" onclick="toggleTimelineNav()">📆 日期</span>
+                <span class="refresh-btn" onclick="loadData()">🔄 刷新</span>
+            </div>
+            <div class="tag-wrapper">
+                <div class="tag-list-container" id="tagList"></div>
+                <div class="toggle-btn" id="toggleBtn" onclick="toggleTags()">展开 ▾</div>
+            </div>
+            <div class="timeline-nav-container" id="timelineNavContainer">
+                <div class="timeline-nav" id="timelineNav"></div>
+            </div>
+        </div>
+
+        <div class="content" id="content"></div>
+
+        <div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+        <script>
+            // 全局变量
+            let allItems = [];
+            let sortedTags = [];
+            let chatId = null;
+            let cards = [];
+            let listTags = [];
+            let monthGroups = [];
+            let navItems = [];
+            
+            const JSON_FILE = "https://cdn.jsdelivr.net/gh/gaoky0628-stack/my-json-data@main/result.json";
+            
+            // DOM 元素
+            const content = document.getElementById('content');
+            const header = document.getElementById('header');
+            const loading = document.getElementById('loading');
+            const tagList = document.getElementById('tagList');
+            const timelineNav = document.getElementById('timelineNav');
+            const searchInput = document.getElementById('searchInput');
+            const statsSpan = document.getElementById('stats');
+            const timelineNavContainer = document.getElementById('timelineNavContainer');
+            const toggleBtn = document.getElementById('toggleBtn');
+
+            // 辅助函数
+            function parseTime(t) {
+                try {
+                    return new Date(t);
+                } catch {
+                    return null;
+                }
+            }
+
+            function detectChatId(messages) {
+                for (let msg of messages) {
+                    const text = msg.text;
+                    if (Array.isArray(text)) {
+                        for (let part of text) {
+                            if (part && part.type === 'text_link') {
+                                const href = part.href || '';
+                                const m = href.match(/t\.me\/c\/(\d+)/);
+                                if (m) return m[1];
+                            }
+                        }
+                    }
+                }
+                return null;
+            }
+
+            function buildLink(chatId, messageId) {
+                if (!chatId || !messageId) return '#';
+                const cleanId = String(chatId).replace('-100', '');
+                return `https://t.me/c/${cleanId}/${messageId}`;
+            }
+
+            function extractTags(msg) {
+                const text = msg.text;
+                const tags = [];
+                
+                function scan(raw) {
+                    if (!raw) return [];
+                    const matches = raw.match(/#([\w][\w\.\-]*[\w]|[\w])/g) || [];
+                    return matches.map(m => m.slice(1));
+                }
+                
+                if (Array.isArray(text)) {
+                    for (let p of text) {
+                        if (p && p.type === 'hashtag') {
+                            tags.push(p.text.slice(1));
+                        } else if (p && p.text) {
+                            tags.push(...scan(p.text));
+                        } else if (typeof p === 'string') {
+                            tags.push(...scan(p));
+                        }
+                    }
+                } else if (typeof text === 'string') {
+                    tags.push(...scan(text));
+                }
+                
+                return [...new Set(tags.filter(t => t))];
+            }
+
+            function extractLinks(msg) {
+                const links = [];
+                const text = msg.text;
+                if (Array.isArray(text)) {
+                    for (let p of text) {
+                        if (p && p.type === 'text_link' && p.href) {
+                            links.push({
+                                label: p.text || '点击打开',
+                                url: p.href
+                            });
+                        }
+                    }
+                }
+                return links;
+            }
+
+            function getPhoto(msg) {
+                const p = msg.photo;
+                if (typeof p === 'string' && !p.includes('File not included')) {
+                    const parts = p.split('/');
+                    return `photos/${parts[parts.length - 1]}`;
+                }
+                return null;
+            }
+
+            // 处理数据并渲染
+            function processData(data) {
+                const messages = data.messages || [];
+                chatId = detectChatId(messages);
+                
+                // 手动设置 chatId（如果需要）
+                // if (!chatId) chatId = "3755321415";
+                
+                const items = [];
+                const allTagsList = [];
+                const seen = new Set();
+                
+                for (let msg of messages) {
+                    const msgId = msg.id;
+                    if (seen.has(msgId)) continue;
+                    seen.add(msgId);
+                    
+                    const time = parseTime(msg.date);
+                    const photo = getPhoto(msg);
+                    if (!time || !photo) continue;
+                    
+                    const tags = extractTags(msg);
+                    allTagsList.push(...tags);
+                    
+                    const extraLinks = extractLinks(msg);
+                    const linkSearchText = extraLinks.map(l => l.label).join(' ');
+                    
+                    items.push({
+                        datetime: time,
+                        time: time.toISOString().split('T')[0],
+                        year: time.getFullYear(),
+                        month: time.getMonth() + 1,
+                        year_month: `${time.getFullYear()}年${String(time.getMonth() + 1).padStart(2, '0')}月`,
+                        photo: photo,
+                        tags: tags,
+                        msg_url: buildLink(chatId, msgId),
+                        extra_links: extraLinks,
+                        link_search_text: linkSearchText
+                    });
+                }
+                
+                // 按时间倒序排序
+                items.sort((a, b) => b.datetime - a.datetime);
+                
+                // 按年月分组
+                const groupedItems = {};
+                for (let item of items) {
+                    const key = item.year_month;
+                    if (!groupedItems[key]) groupedItems[key] = [];
+                    groupedItems[key].push(item);
+                }
+                
+                // 排序分组
+                const sortedGroups = Object.entries(groupedItems).sort((a, b) => b[0].localeCompare(a[0]));
+                
+                // 统计标签
+                const tagCounts = {};
+                allTagsList.forEach(t => tagCounts[t] = (tagCounts[t] || 0) + 1);
+                sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).map(e => e[0]);
+                
+                return { items, sortedGroups };
+            }
+
+            // 渲染页面
+            function renderPage(items, sortedGroups) {
+                allItems = items;
+                
+                // 渲染标签列表
+                tagList.innerHTML = sortedTags.map(tag => 
+                    `<span class="list-tag" data-tag="${tag}" onclick="filterByTag('${tag}')">#${tag}</span>`
+                ).join('');
+                
+                // 渲染时间导航
+                timelineNav.innerHTML = sortedGroups.map(([name, groupItems]) => 
+                    `<span class="nav-item" data-month="${name}" onclick="scrollToMonth('${name}')">${name} (${groupItems.length})</span>`
+                ).join('');
+                
+                // 渲染内容
+                content.innerHTML = sortedGroups.map(([groupName, groupItems]) => `
+                    <div class="month-group" data-month="${groupName}">
+                        <div class="grid">
+                            ${groupItems.map(item => `
+                                <div class="card" data-tags="${item.tags.join(' ')}" data-link-text="${item.link_search_text}" data-date="${item.time}">
+                                    <a href="${item.msg_url}" class="card-img-link" target="_blank">
+                                        <img data-src="${item.photo}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="image">
+                                    </a>
+                                    <div class="info">
+                                        <span>${item.time}</span>
+                                        <a href="${item.msg_url}" class="origin-link" target="_blank">🔗 原文</a>
+                                    </div>
+                                    <div class="tags">
+                                        ${item.tags.map(t => `<span class="tagItem" onclick="filterByTag('${t}')">#${t}</span>`).join('')}
+                                    </div>
+                                    ${item.extra_links.length ? `
+                                        <div class="extra-links">
+                                            ${item.extra_links.map(link => `<a href="${link.url}" target="_blank">📄 ${link.label}</a>`).join('')}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('');
+                
+                // 更新全局变量
+                cards = document.querySelectorAll(".card");
+                listTags = document.querySelectorAll(".list-tag");
+                monthGroups = document.querySelectorAll(".month-group");
+                navItems = document.querySelectorAll(".nav-item");
+                
+                // 初始化图片懒加载
+                initLazyLoad();
+                
+                // 更新统计
+                updateStats();
+                
+                // 显示公告
+                showToast(`📢 加载完成：${items.length} 张图片，${sortedTags.length} 个标签`);
+            }
+
+            // 加载数据
+            async function loadData() {
+                try {
+                    header.style.display = 'none';
+                    loading.style.display = 'block';
+                    
+                    const response = await fetch(JSON_FILE);
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    const data = await response.json();
+                    
+                    const { items, sortedGroups } = processData(data);
+                    renderPage(items, sortedGroups);
+                    
+                    header.style.display = 'block';
+                    loading.style.display = 'none';
+                    
+                    const timeSpan = items.length > 0 ? `${items[items.length-1].year_month} 至 ${items[0].year_month}` : '无数据';
+                    console.log(`✅ 加载成功，共 ${items.length} 张图片，时间跨度：${timeSpan}`);
+                } catch (error) {
+                    loading.innerHTML = `❌ 加载失败：${error.message}<br><br><span style="color:#00ffcc;cursor:pointer;" onclick="loadData()">点击重试</span>`;
+                    console.error('加载失败:', error);
+                }
+            }
+
+            // 图片懒加载
+            function initLazyLoad() {
+                const imgs = document.querySelectorAll("img[data-src]");
+                const io = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.src = e.target.dataset.src;
+                            io.unobserve(e.target);
+                        }
+                    });
+                });
+                imgs.forEach(img => io.observe(img));
+            }
+
+            // UI 交互函数
+            function toggleTimelineNav() {
+                const btn = document.querySelector('.show-timeline-btn');
+                if (timelineNavContainer.classList.contains('show')) {
+                    timelineNavContainer.classList.remove('show');
+                    btn.innerHTML = '📆 日期';
+                } else {
+                    timelineNavContainer.classList.add('show');
+                    btn.innerHTML = '📆 收起';
+                }
+            }
+
+            function showToast(message) {
+                const existingToast = document.querySelector('.toast-notification');
+                if (existingToast) existingToast.remove();
+                
+                const toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.innerHTML = message;
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.classList.add('toast-fadeout');
+                    setTimeout(() => { if (toast.parentNode) toast.remove(); }, 400);
+                }, 5000);
+            }
+
+            function updateStats() {
+                const visibleCount = Array.from(cards).filter(card => !card.classList.contains('hide')).length;
+                const totalCount = cards.length;
+                statsSpan.textContent = `${visibleCount}/${totalCount}`;
+                
+                monthGroups.forEach(group => {
+                    const groupCards = group.querySelectorAll(".card");
+                    const visibleInGroup = Array.from(groupCards).filter(card => !card.classList.contains('hide')).length;
+                    const monthName = group.dataset.month;
+                    const navItem = Array.from(navItems).find(nav => nav.dataset.month === monthName);
+                    if (navItem) {
+                        if (visibleInGroup === 0) {
+                            group.classList.add('hide');
+                            navItem.style.opacity = '0.4';
+                        } else {
+                            group.classList.remove('hide');
+                            navItem.style.opacity = '1';
+                            navItem.innerHTML = `${monthName} (${visibleInGroup})`;
+                        }
+                    }
+                });
+            }
+
+            function toggleTags() {
+                const isExp = tagList.classList.toggle('expanded');
+                toggleBtn.innerText = isExp ? '收起 ▴' : '展开 ▾';
+            }
+
+            function doSearch() {
+                const keyword = searchInput.value.toLowerCase().trim();
+                cards.forEach(card => {
+                    const tags = card.dataset.tags.toLowerCase();
+                    const linkText = card.dataset.linkText.toLowerCase();
+                    const matches = keyword === "" || tags.includes(keyword) || linkText.includes(keyword);
+                    card.classList.toggle("hide", !matches);
+                });
+                listTags.forEach(t => {
+                    const tagValue = t.dataset.tag.toLowerCase();
+                    t.classList.toggle("active", keyword !== "" && tagValue === keyword);
+                });
+                updateStats();
+            }
+
+            function filterByTag(tag) {
+                searchInput.value = "";
+                cards.forEach(card => {
+                    const tags = card.dataset.tags.toLowerCase();
+                    card.classList.toggle("hide", !tags.includes(tag.toLowerCase()));
+                });
+                listTags.forEach(t => t.classList.remove("active"));
+                const clickedTag = Array.from(listTags).find(t => t.dataset.tag === tag);
+                if (clickedTag) clickedTag.classList.add("active");
+                tagList.classList.remove('expanded');
+                toggleBtn.innerText = '展开 ▾';
+                window.scrollTo({top: 0, behavior: 'smooth'});
+                updateStats();
+            }
+
+            function resetAll() {
+                searchInput.value = "";
+                cards.forEach(card => card.classList.remove("hide"));
+                listTags.forEach(t => t.classList.remove("active"));
+                tagList.classList.remove('expanded');
+                toggleBtn.innerText = '展开 ▾';
+                updateStats();
+            }
+
+            function showLast7Days() {
+                const sevenDaysAgo = new Date();
+                sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+                let visibleCount = 0;
+                cards.forEach(card => {
+                    const dateStr = card.dataset.date;
+                    if (dateStr) {
+                        const cardDate = new Date(dateStr);
+                        if (cardDate >= sevenDaysAgo) {
+                            card.classList.remove("hide");
+                            visibleCount++;
+                        } else {
+                            card.classList.add("hide");
+                        }
+                    }
+                });
+                searchInput.value = "";
+                listTags.forEach(t => t.classList.remove("active"));
+                tagList.classList.remove('expanded');
+                toggleBtn.innerText = '展开 ▾';
+                updateStats();
+                showToast(`📅 近7天 ${visibleCount} 张`);
+                if (visibleCount === 0) showToast('⚠️ 近7天无新图');
+            }
+
+            function scrollToMonth(monthName) {
+                const targetGroup = Array.from(monthGroups).find(g => g.dataset.month === monthName);
+                if (targetGroup && !targetGroup.classList.contains('hide')) {
+                    const headerOffset = 100;
+                    const elementPosition = targetGroup.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({top: offsetPosition, behavior: 'smooth'});
+                }
+                navItems.forEach(nav => {
+                    nav.classList.remove('active');
+                    if (nav.dataset.month === monthName) nav.classList.add('active');
+                });
+            }
+
+            // 滚动监听
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY + 120;
+                let currentMonth = null;
+                monthGroups.forEach(group => {
+                    if (!group.classList.contains('hide')) {
+                        const groupTop = group.offsetTop;
+                        if (scrollPosition >= groupTop) currentMonth = group.dataset.month;
+                    }
+                });
+                navItems.forEach(nav => {
+                    nav.classList.remove('active');
+                    if (nav.dataset.month === currentMonth) nav.classList.add('active');
+                });
+            });
+
+            // 页面加载时自动加载数据
+            window.addEventListener('DOMContentLoaded', loadData);
+        </script>
+    </body>
+    </html>
+    
