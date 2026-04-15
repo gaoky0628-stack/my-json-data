@@ -36231,8 +36231,8 @@
             "type": "message",
             "date": "2026-04-15T06:52:36",
             "date_unixtime": "1776235956",
-            "edited": "2026-04-15T06:52:39",
-            "edited_unixtime": "1776235959",
+            "edited": "2026-04-15T06:52:51",
+            "edited_unixtime": "1776235971",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -36245,7 +36245,12 @@
                     "type": "hashtag",
                     "text": "#东京放课后"
                 },
-                "\n\n👉 压缩包"
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1123"
+                }
             ],
             "text_entities": [
                 {
@@ -36262,7 +36267,12 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 压缩包"
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1123"
                 }
             ],
             "photo": "",
