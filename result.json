@@ -36098,6 +36098,38 @@
             "file": "(File not included...)",
             "file_size": 6860570,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1120,
+            "type": "message",
+            "date": "2026-04-15T06:42:14",
+            "date_unixtime": "1776235334",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#昆布"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#昆布"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "photos\\photo_1120@15-04-2026_06-42-14.jpg",
+            "photo_file_size": 139143,
+            "width": 1280,
+            "height": 898,
+            "image_url": "https://files.catbox.moe/cn5x76.jpg"
         }
     ]
 }
