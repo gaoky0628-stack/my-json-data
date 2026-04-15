@@ -35734,8 +35734,8 @@
             "type": "message",
             "date": "2026-04-15T06:02:06",
             "date_unixtime": "1776232926",
-            "edited": "2026-04-15T06:02:09",
-            "edited_unixtime": "1776232929",
+            "edited": "2026-04-15T06:05:44",
+            "edited_unixtime": "1776233144",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -35743,7 +35743,12 @@
                     "type": "hashtag",
                     "text": "#seike"
                 },
-                "\n\n👉 压缩包"
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1107"
+                }
             ],
             "text_entities": [
                 {
@@ -35752,7 +35757,12 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 压缩包"
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1107"
                 }
             ],
             "photo": "",
