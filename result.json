@@ -36225,6 +36225,51 @@
             "file": "(File not included...)",
             "file_size": 40339626,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1124,
+            "type": "message",
+            "date": "2026-04-15T06:52:36",
+            "date_unixtime": "1776235956",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#conoji"
+                },
+                " ",
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#conoji"
+                },
+                {
+                    "type": "plain",
+                    "text": " "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "photos\\photo_1124@15-04-2026_06-52-36.jpg",
+            "photo_file_size": 204425,
+            "width": 901,
+            "height": 1280,
+            "image_url": "https://files.catbox.moe/ettsgz.jpg"
         }
     ]
 }
