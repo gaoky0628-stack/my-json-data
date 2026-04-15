@@ -39360,8 +39360,8 @@
             "type": "message",
             "date": "2026-04-15T16:00:32",
             "date_unixtime": "1776268832",
-            "edited": "2026-04-15T16:00:35",
-            "edited_unixtime": "1776268835",
+            "edited": "2026-04-15T16:00:39",
+            "edited_unixtime": "1776268839",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -39390,7 +39390,12 @@
                     "text": "压缩包",
                     "href": "https://t.me/c/3755321415/1276"
                 }
-            ]
+            ],
+            "photo": "photos\\photo_1277@15-04-2026_16-00-32.jpg",
+            "photo_file_size": 145544,
+            "width": 905,
+            "height": 1280,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAANSad-2Kg8sdLZqgvj9qt6qN-FckFoAAokOaxtkRAABV227T5LLZ-5RAQADAgADeQADOwQ.jpg"
         }
     ]
 }
