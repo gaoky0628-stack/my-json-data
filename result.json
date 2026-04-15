@@ -37553,8 +37553,8 @@
             "type": "message",
             "date": "2026-04-15T15:32:42",
             "date_unixtime": "1776267162",
-            "edited": null,
-            "edited_unixtime": null,
+            "edited": "2026-04-15T15:32:46",
+            "edited_unixtime": "1776267166",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -37584,10 +37584,10 @@
                     "href": "https://t.me/c/3755321415/1210"
                 }
             ],
-            "photo": "photos\\photo_1211@15-04-2026_15-32-42.jpg",
-            "photo_file_size": 115466,
-            "width": 901,
-            "height": 1280,
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
             "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMyad-vnNuYgkQ8x5P8yJPf3YttHxYAAmMOaxtkRAABV3QNI9eQssLpAQADAgADeQADOwQ.jpg"
         }
     ]
