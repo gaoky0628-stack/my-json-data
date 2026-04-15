@@ -36155,6 +36155,51 @@
             "file": "(File not included...)",
             "file_size": 18025037,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1122,
+            "type": "message",
+            "date": "2026-04-15T06:44:55",
+            "date_unixtime": "1776235495",
+            "edited": "2026-04-15T06:44:58",
+            "edited_unixtime": "1776235498",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#岩倉ゆう"
+                },
+                " ",
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#岩倉ゆう"
+                },
+                {
+                    "type": "plain",
+                    "text": " "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://files.catbox.moe/0tpdj7.jpg"
         }
     ]
 }
