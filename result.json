@@ -35728,6 +35728,38 @@
             "file": "(File not included...)",
             "file_size": 16887948,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1106,
+            "type": "message",
+            "date": "2026-04-15T06:02:06",
+            "date_unixtime": "1776232926",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#seike"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#seike"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "photos\\photo_1106@15-04-2026_06-02-06.jpg",
+            "photo_file_size": 121174,
+            "width": 1280,
+            "height": 899,
+            "image_url": "https://files.catbox.moe/5885em.jpg"
         }
     ]
 }
