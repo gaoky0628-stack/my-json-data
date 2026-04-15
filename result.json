@@ -36452,6 +36452,21 @@
             "width": 735,
             "height": 1024,
             "image_url": "https://files.catbox.moe/e0essq.jpg"
+        },
+        {
+            "id": 1135,
+            "type": "message",
+            "date": "2026-04-15T07:47:12",
+            "date_unixtime": "1776239232",
+            "edited": "2026-04-15T07:47:15",
+            "edited_unixtime": "1776239235",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 15775950,
+            "mime_type": "application/zip"
         }
     ]
 }
