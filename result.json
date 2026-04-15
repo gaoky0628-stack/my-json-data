@@ -36337,6 +36337,51 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/ywknac.jpg"
+        },
+        {
+            "id": 1131,
+            "type": "message",
+            "date": "2026-04-15T07:28:31",
+            "date_unixtime": "1776238111",
+            "edited": "2026-04-15T07:28:34",
+            "edited_unixtime": "1776238114",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#泥水"
+                },
+                " ",
+                {
+                    "type": "hashtag",
+                    "text": "#中文"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#泥水"
+                },
+                {
+                    "type": "plain",
+                    "text": " "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#中文"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://files.catbox.moe/4t0fkj.jpg"
         }
     ]
 }
