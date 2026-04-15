@@ -39474,8 +39474,8 @@
             "type": "message",
             "date": "2026-04-15T16:01:55",
             "date_unixtime": "1776268915",
-            "edited": "2026-04-15T16:21:08",
-            "edited_unixtime": "1776270068",
+            "edited": "2026-04-15T16:21:42",
+            "edited_unixtime": "1776270102",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -39486,7 +39486,7 @@
                 " ",
                 {
                     "type": "hashtag",
-                    "text": "#东京放课"
+                    "text": "#东京放课后"
                 },
                 "\n\n👉",
                 {
@@ -39506,7 +39506,7 @@
                 },
                 {
                     "type": "hashtag",
-                    "text": "#东京放课"
+                    "text": "#东京放课后"
                 },
                 {
                     "type": "plain",
