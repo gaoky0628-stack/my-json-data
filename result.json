@@ -36280,6 +36280,21 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/ettsgz.jpg"
+        },
+        {
+            "id": 1129,
+            "type": "message",
+            "date": "2026-04-15T07:09:49",
+            "date_unixtime": "1776236989",
+            "edited": "2026-04-15T07:09:52",
+            "edited_unixtime": "1776236992",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 4796410,
+            "mime_type": "application/zip"
         }
     ]
 }
