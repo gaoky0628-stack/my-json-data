@@ -38499,6 +38499,48 @@
             "file": "(File not included...)",
             "file_size": 74670254,
             "mime_type": "application/pdf"
+        },
+        {
+            "id": 1245,
+            "type": "message",
+            "date": "2026-04-15T15:45:48",
+            "date_unixtime": "1776267948",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#まだら模様"
+                },
+                "\n\n👉",
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1244"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#まだら模様"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉"
+                },
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1244"
+                }
+            ],
+            "photo": "photos\\photo_1245@15-04-2026_15-45-48.jpg",
+            "photo_file_size": 166727,
+            "width": 905,
+            "height": 1280,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAANDad-yrmC0eRZkJiBTi2kkO9VDF-gAAnYOaxtkRAABV64W4dedxNj9AQADAgADeQADOwQ.jpg"
         }
     ]
 }
