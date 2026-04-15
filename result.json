@@ -36301,8 +36301,8 @@
             "type": "message",
             "date": "2026-04-15T07:10:14",
             "date_unixtime": "1776237014",
-            "edited": null,
-            "edited_unixtime": null,
+            "edited": "2026-04-15T07:10:17",
+            "edited_unixtime": "1776237017",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -36332,10 +36332,10 @@
                     "href": "https://t.me/c/3755321415/1129"
                 }
             ],
-            "photo": "photos\\photo_1130@15-04-2026_07-10-14.jpg",
-            "photo_file_size": 93327,
-            "width": 1280,
-            "height": 913,
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
             "image_url": "https://files.catbox.moe/ywknac.jpg"
         }
     ]
