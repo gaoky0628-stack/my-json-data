@@ -35848,8 +35848,8 @@
             "type": "message",
             "date": "2026-04-15T06:10:55",
             "date_unixtime": "1776233455",
-            "edited": "2026-04-15T06:10:58",
-            "edited_unixtime": "1776233458",
+            "edited": "2026-04-15T06:12:57",
+            "edited_unixtime": "1776233577",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -35857,7 +35857,12 @@
                     "type": "hashtag",
                     "text": "#kotobuki"
                 },
-                "\n\n👉 压缩包"
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1111"
+                }
             ],
             "text_entities": [
                 {
@@ -35866,7 +35871,12 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 压缩包"
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1111"
                 }
             ],
             "photo": "",
