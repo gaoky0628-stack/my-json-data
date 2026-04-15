@@ -36484,33 +36484,6 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/4fro60.jpg"
-        },
-        {
-            "id": 1145,
-            "type": "message",
-            "date": "2026-04-15T08:33:49",
-            "date_unixtime": "1776242029",
-            "edited": "2026-04-15T08:33:52",
-            "edited_unixtime": "1776242032",
-            "from": "自用",
-            "from_id": "channel3755321415",
-            "text": [
-                {
-                    "type": "hashtag",
-                    "text": "#测试"
-                }
-            ],
-            "text_entities": [
-                {
-                    "type": "hashtag",
-                    "text": "#测试"
-                }
-            ],
-            "photo": "",
-            "photo_file_size": 0,
-            "width": 0,
-            "height": 0,
-            "image_url": "https://files.catbox.moe/8k9sx6.jpg"
         }
     ]
 }
