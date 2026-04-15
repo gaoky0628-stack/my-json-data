@@ -38771,21 +38771,6 @@
             "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAANHad-zofo1HqoTrRXC2LvPgbTFczQAAnwOaxtkRAABV5Y5whcWDsmmAQADAgADeQADOwQ.jpg"
         },
         {
-            "id": 1254,
-            "type": "message",
-            "date": "2026-04-15T15:50:03",
-            "date_unixtime": "1776268203",
-            "edited": "2026-04-15T15:50:06",
-            "edited_unixtime": "1776268206",
-            "from": "自用",
-            "from_id": "channel3755321415",
-            "text": [],
-            "text_entities": [],
-            "file": "(File not included...)",
-            "file_size": 11423786,
-            "mime_type": "application/zip"
-        },
-        {
             "id": 1255,
             "type": "message",
             "date": "2026-04-15T15:50:17",
@@ -38826,6 +38811,21 @@
             "width": 0,
             "height": 0,
             "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAANIad-zwY8xKJjaSXbPNczjKtJ2msYAAn0OaxtkRAABV1s6uqA15vrDAQADAgADeQADOwQ.jpg"
+        },
+        {
+            "id": 1256,
+            "type": "message",
+            "date": "2026-04-15T15:50:22",
+            "date_unixtime": "1776268222",
+            "edited": "2026-04-15T15:50:25",
+            "edited_unixtime": "1776268225",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 4982659,
+            "mime_type": "application/pdf"
         }
     ]
 }
