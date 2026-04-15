@@ -39658,8 +39658,8 @@
             "type": "message",
             "date": "2026-04-15T16:04:34",
             "date_unixtime": "1776269074",
-            "edited": "2026-04-15T16:04:37",
-            "edited_unixtime": "1776269077",
+            "edited": "2026-04-15T16:20:47",
+            "edited_unixtime": "1776270047",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -39670,7 +39670,7 @@
                 "\n\n👉",
                 {
                     "type": "text_link",
-                    "text": "pdf",
+                    "text": "pd",
                     "href": "https://t.me/c/3755321415/1286"
                 }
             ],
@@ -39685,7 +39685,7 @@
                 },
                 {
                     "type": "text_link",
-                    "text": "pdf",
+                    "text": "pd",
                     "href": "https://t.me/c/3755321415/1286"
                 }
             ],
