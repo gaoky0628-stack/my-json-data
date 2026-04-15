@@ -37490,6 +37490,48 @@
             "file": "(File not included...)",
             "file_size": 70963299,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1209,
+            "type": "message",
+            "date": "2026-04-15T15:31:22",
+            "date_unixtime": "1776267082",
+            "edited": "2026-04-15T15:31:25",
+            "edited_unixtime": "1776267085",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#hyaku"
+                },
+                "\n\n👉",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1208"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#hyaku"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉"
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1208"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMxad-vTYiNq2erzVBPshDV3LzCoNUAAmIOaxtkRAABV3cBEt3IUUm7AQADAgADeQADOwQ.jpg"
         }
     ]
 }
