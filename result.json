@@ -38349,8 +38349,8 @@
             "type": "message",
             "date": "2026-04-15T15:42:18",
             "date_unixtime": "1776267738",
-            "edited": "2026-04-15T15:42:21",
-            "edited_unixtime": "1776267741",
+            "edited": "2026-04-15T15:42:25",
+            "edited_unixtime": "1776267745",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -38358,12 +38358,7 @@
                     "type": "hashtag",
                     "text": "#プランク"
                 },
-                "㌧ ",
-                {
-                    "type": "hashtag",
-                    "text": "#东京放课后"
-                },
-                "\n\n👉",
+                "㌧\n\n👉",
                 {
                     "type": "text_link",
                     "text": "pdf",
@@ -38377,15 +38372,7 @@
                 },
                 {
                     "type": "plain",
-                    "text": "㌧ "
-                },
-                {
-                    "type": "hashtag",
-                    "text": "#东京放课后"
-                },
-                {
-                    "type": "plain",
-                    "text": "\n\n👉"
+                    "text": "㌧\n\n👉"
                 },
                 {
                     "type": "text_link",
