@@ -36104,8 +36104,8 @@
             "type": "message",
             "date": "2026-04-15T06:42:14",
             "date_unixtime": "1776235334",
-            "edited": null,
-            "edited_unixtime": null,
+            "edited": "2026-04-15T06:42:18",
+            "edited_unixtime": "1776235338",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -36125,10 +36125,10 @@
                     "text": "\n\n👉 压缩包"
                 }
             ],
-            "photo": "photos\\photo_1120@15-04-2026_06-42-14.jpg",
-            "photo_file_size": 139143,
-            "width": 1280,
-            "height": 898,
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
             "image_url": "https://files.catbox.moe/cn5x76.jpg"
         }
     ]
