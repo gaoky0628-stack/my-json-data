@@ -37382,14 +37382,14 @@
             "type": "message",
             "date": "2026-04-15T15:28:18",
             "date_unixtime": "1776266898",
-            "edited": "2026-04-15T15:28:21",
-            "edited_unixtime": "1776266901",
+            "edited": "2026-04-15T15:30:14",
+            "edited_unixtime": "1776267014",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
                 {
                     "type": "hashtag",
-                    "text": "#ヒャク"
+                    "text": "#hyaku"
                 },
                 "\n\n👉",
                 {
@@ -37401,7 +37401,7 @@
             "text_entities": [
                 {
                     "type": "hashtag",
-                    "text": "#ヒャク"
+                    "text": "#hyaku"
                 },
                 {
                     "type": "plain",
