@@ -36484,6 +36484,38 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/4fro60.jpg"
+        },
+        {
+            "id": 1149,
+            "type": "message",
+            "date": "2026-04-15T09:36:28",
+            "date_unixtime": "1776245788",
+            "edited": "2026-04-15T09:36:31",
+            "edited_unixtime": "1776245791",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#kuroma"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#kuroma"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "photos\\photo_1149@15-04-2026_09-36-28.jpg",
+            "photo_file_size": 265281,
+            "width": 905,
+            "height": 1280,
+            "image_url": "https://files.catbox.moe/5rreyz.jpg"
         }
     ]
 }
