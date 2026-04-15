@@ -36295,6 +36295,48 @@
             "file": "(File not included...)",
             "file_size": 4796410,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1130,
+            "type": "message",
+            "date": "2026-04-15T07:10:14",
+            "date_unixtime": "1776237014",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#らんち"
+                },
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1129"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#らんち"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1129"
+                }
+            ],
+            "photo": "photos\\photo_1130@15-04-2026_07-10-14.jpg",
+            "photo_file_size": 93327,
+            "width": 1280,
+            "height": 913,
+            "image_url": "https://files.catbox.moe/ywknac.jpg"
         }
     ]
 }
