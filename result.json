@@ -36506,10 +36506,10 @@
                     "text": "#测试"
                 }
             ],
-            "photo": "photos\\photo_1145@15-04-2026_08-33-49.jpg",
-            "photo_file_size": 33466,
-            "width": 569,
-            "height": 361,
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
             "image_url": "https://files.catbox.moe/8k9sx6.jpg"
         }
     ]
