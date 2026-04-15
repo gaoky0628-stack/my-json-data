@@ -35899,6 +35899,38 @@
             "file": "(File not included...)",
             "file_size": 21560955,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1112,
+            "type": "message",
+            "date": "2026-04-15T06:13:26",
+            "date_unixtime": "1776233606",
+            "edited": "2026-04-15T06:13:29",
+            "edited_unixtime": "1776233609",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#木"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#木"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://files.catbox.moe/o4e9xk.jpg"
         }
     ]
 }
