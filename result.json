@@ -36413,8 +36413,8 @@
             "type": "message",
             "date": "2026-04-15T07:46:52",
             "date_unixtime": "1776239212",
-            "edited": "2026-04-15T07:46:55",
-            "edited_unixtime": "1776239215",
+            "edited": "2026-04-15T07:47:38",
+            "edited_unixtime": "1776239258",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -36427,7 +36427,12 @@
                     "type": "hashtag",
                     "text": "#扫描"
                 },
-                "\n\n👉 压缩包"
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1135"
+                }
             ],
             "text_entities": [
                 {
@@ -36444,13 +36449,18 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 压缩包"
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1135"
                 }
             ],
-            "photo": "photos\\photo_1134@15-04-2026_07-46-52.jpg",
-            "photo_file_size": 85511,
-            "width": 735,
-            "height": 1024,
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
             "image_url": "https://files.catbox.moe/e0essq.jpg"
         },
         {
