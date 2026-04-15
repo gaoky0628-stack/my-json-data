@@ -35622,8 +35622,8 @@
             "type": "message",
             "date": "2026-04-15T04:37:35",
             "date_unixtime": "1776227855",
-            "edited": "2026-04-15T05:12:02",
-            "edited_unixtime": "1776229922",
+            "edited": "2026-04-15T05:17:23",
+            "edited_unixtime": "1776230243",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -35631,13 +35631,17 @@
                     "type": "hashtag",
                     "text": "#水濑ひこ丸"
                 },
-                "\n\n👉 [",
+                " ",
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                "\n\n👉 ",
                 {
                     "type": "text_link",
                     "text": "压缩包",
                     "href": "https://t.me/c/3755321415/1103"
-                },
-                "](https://t.me/c/3755321415/1103)"
+                }
             ],
             "text_entities": [
                 {
@@ -35646,16 +35650,20 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 ["
+                    "text": " "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 "
                 },
                 {
                     "type": "text_link",
                     "text": "压缩包",
                     "href": "https://t.me/c/3755321415/1103"
-                },
-                {
-                    "type": "plain",
-                    "text": "](https://t.me/c/3755321415/1103)"
                 }
             ],
             "photo": "",
