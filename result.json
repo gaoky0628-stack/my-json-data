@@ -36681,6 +36681,51 @@
             "width": 0,
             "height": 0,
             "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMiad-cgJuzmuwjdCl1Oq81qdjErPgAAsgQaxtkRPhWN4VvyeRqd8wBAAMCAAN5AAM7BA.jpg"
+        },
+        {
+            "id": 1155,
+            "type": "message",
+            "date": "2026-04-15T14:29:45",
+            "date_unixtime": "1776263385",
+            "edited": "2026-04-15T14:29:48",
+            "edited_unixtime": "1776263388",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#クロくす"
+                },
+                " ",
+                {
+                    "type": "hashtag",
+                    "text": "#图集"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#クロくす"
+                },
+                {
+                    "type": "plain",
+                    "text": " "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#图集"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMjad-g3qZGHl9Gvda6YUble5jqGvkAAtgQaxtkRPhWUNpKl_T5X4wBAAMCAAN5AAM7BA.jpg"
         }
     ]
 }
