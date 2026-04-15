@@ -36422,68 +36422,6 @@
             "file": "(File not included...)",
             "file_size": 15775950,
             "mime_type": "application/zip"
-        },
-        {
-            "id": 1138,
-            "type": "message",
-            "date": "2026-04-15T07:55:41",
-            "date_unixtime": "1776239741",
-            "edited": "2026-04-15T08:24:10",
-            "edited_unixtime": "1776241450",
-            "from": "自用",
-            "from_id": "channel3755321415",
-            "text": [
-                {
-                    "type": "hashtag",
-                    "text": "#茶虎"
-                },
-                "\n\n👉 ",
-                {
-                    "type": "text_link",
-                    "text": "压缩包",
-                    "href": "https://t.me/c/3755321415/1140"
-                },
-                "](https:",
-                {
-                    "type": "text_link",
-                    "text": "//t",
-                    "href": "https://t.me/c/3755321415/1139"
-                },
-                ".me/c/3755321415/1140)（中文）\n👉 [压缩包](https://t.me/c/3755321415/1139)（日文"
-            ],
-            "text_entities": [
-                {
-                    "type": "hashtag",
-                    "text": "#茶虎"
-                },
-                {
-                    "type": "plain",
-                    "text": "\n\n👉 "
-                },
-                {
-                    "type": "text_link",
-                    "text": "压缩包",
-                    "href": "https://t.me/c/3755321415/1140"
-                },
-                {
-                    "type": "plain",
-                    "text": "](https:"
-                },
-                {
-                    "type": "text_link",
-                    "text": "//t",
-                    "href": "https://t.me/c/3755321415/1139"
-                },
-                {
-                    "type": "plain",
-                    "text": ".me/c/3755321415/1140)（中文）\n👉 [压缩包](https://t.me/c/3755321415/1139)（日文"
-                }
-            ],
-            "photo": "photos\\photo_1138@15-04-2026_07-55-41.jpg",
-            "photo_file_size": 166865,
-            "width": 712,
-            "height": 1024,
-            "image_url": "https://files.catbox.moe/4fro60.jpg"
         }
     ]
 }
