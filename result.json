@@ -35971,6 +35971,38 @@
             "file": "(File not included...)",
             "file_size": 17518721,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1116,
+            "type": "message",
+            "date": "2026-04-15T06:29:20",
+            "date_unixtime": "1776234560",
+            "edited": "2026-04-15T06:29:23",
+            "edited_unixtime": "1776234563",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#大川犬威"
+                },
+                "\n\n👉 压缩包"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#大川犬威"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 压缩包"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://files.catbox.moe/rszutf.jpg"
         }
     ]
 }
