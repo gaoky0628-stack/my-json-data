@@ -38826,6 +38826,21 @@
             "file": "(File not included...)",
             "file_size": 4982659,
             "mime_type": "application/pdf"
+        },
+        {
+            "id": 1257,
+            "type": "message",
+            "date": "2026-04-15T15:51:18",
+            "date_unixtime": "1776268278",
+            "edited": "2026-04-15T15:51:21",
+            "edited_unixtime": "1776268281",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 4945605,
+            "mime_type": "application/pdf"
         }
     ]
 }
