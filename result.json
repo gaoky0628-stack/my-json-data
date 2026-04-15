@@ -36490,8 +36490,8 @@
             "type": "message",
             "date": "2026-04-15T09:36:28",
             "date_unixtime": "1776245788",
-            "edited": "2026-04-15T09:37:02",
-            "edited_unixtime": "1776245822",
+            "edited": "2026-04-15T12:34:13",
+            "edited_unixtime": "1776256453",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -36502,7 +36502,7 @@
                 "\n\n👉 ",
                 {
                     "type": "text_link",
-                    "text": "压缩包",
+                    "text": "压缩",
                     "href": "https://t.me/c/3755321415/1150"
                 }
             ],
@@ -36517,7 +36517,7 @@
                 },
                 {
                     "type": "text_link",
-                    "text": "压缩包",
+                    "text": "压缩",
                     "href": "https://t.me/c/3755321415/1150"
                 }
             ],
