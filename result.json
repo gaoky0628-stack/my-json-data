@@ -38273,6 +38273,48 @@
             "file": "(File not included...)",
             "file_size": 44245908,
             "mime_type": "application/pdf"
+        },
+        {
+            "id": 1237,
+            "type": "message",
+            "date": "2026-04-15T15:41:36",
+            "date_unixtime": "1776267696",
+            "edited": "2026-04-15T15:41:39",
+            "edited_unixtime": "1776267699",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#プランク"
+                },
+                "㌧\n\n👉",
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1236"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#プランク"
+                },
+                {
+                    "type": "plain",
+                    "text": "㌧\n\n👉"
+                },
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1236"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAM_ad-xs992eG5Spa1b8oiY965WcQEAAnEOaxtkRAABV2-uXdom4vhKAQADAgADeQADOwQ.jpg"
         }
     ]
 }
