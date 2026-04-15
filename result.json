@@ -35905,8 +35905,8 @@
             "type": "message",
             "date": "2026-04-15T06:13:26",
             "date_unixtime": "1776233606",
-            "edited": "2026-04-15T06:13:29",
-            "edited_unixtime": "1776233609",
+            "edited": "2026-04-15T06:16:00",
+            "edited_unixtime": "1776233760",
             "from": "自用",
             "from_id": "channel3755321415",
             "text": [
@@ -35914,7 +35914,12 @@
                     "type": "hashtag",
                     "text": "#木"
                 },
-                "\n\n👉 压缩包"
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1113"
+                }
             ],
             "text_entities": [
                 {
@@ -35923,7 +35928,12 @@
                 },
                 {
                     "type": "plain",
-                    "text": "\n\n👉 压缩包"
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1113"
                 }
             ],
             "photo": "",
