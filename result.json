@@ -38343,6 +38343,61 @@
             "file": "(File not included...)",
             "file_size": 9656967,
             "mime_type": "application/pdf"
+        },
+        {
+            "id": 1239,
+            "type": "message",
+            "date": "2026-04-15T15:42:18",
+            "date_unixtime": "1776267738",
+            "edited": null,
+            "edited_unixtime": null,
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#プランク"
+                },
+                "㌧ ",
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                "\n\n👉",
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1238"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#プランク"
+                },
+                {
+                    "type": "plain",
+                    "text": "㌧ "
+                },
+                {
+                    "type": "hashtag",
+                    "text": "#东京放课后"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉"
+                },
+                {
+                    "type": "text_link",
+                    "text": "pdf",
+                    "href": "https://t.me/c/3755321415/1238"
+                }
+            ],
+            "photo": "photos\\photo_1239@15-04-2026_15-42-18.jpg",
+            "photo_file_size": 44808,
+            "width": 449,
+            "height": 624,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAANAad-x3OiEdA_PNwfO9z7GRuybAa8AAnIOaxtkRAABV4tJM1ecQJf5AQADAgADeAADOwQ.jpg"
         }
     ]
 }
