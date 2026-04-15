@@ -36878,6 +36878,21 @@
             "width": 0,
             "height": 0,
             "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMlad-niCWYzgY8ECcR5L3JM04r-igAAucQaxtkRPhWDJtzd46_p-UBAAMCAAN5AAM7BA.jpg"
+        },
+        {
+            "id": 1161,
+            "type": "message",
+            "date": "2026-04-15T14:59:01",
+            "date_unixtime": "1776265141",
+            "edited": "2026-04-15T14:59:04",
+            "edited_unixtime": "1776265144",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 20897035,
+            "mime_type": "application/zip"
         }
     ]
 }
