@@ -36422,6 +36422,68 @@
             "file": "(File not included...)",
             "file_size": 15775950,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1144,
+            "type": "message",
+            "date": "2026-04-15T08:33:01",
+            "date_unixtime": "1776241981",
+            "edited": "2026-04-15T08:33:04",
+            "edited_unixtime": "1776241984",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#茶虎"
+                },
+                "\n\n👉 ",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1140"
+                },
+                "](https:",
+                {
+                    "type": "text_link",
+                    "text": "//t",
+                    "href": "https://t.me/c/3755321415/1139"
+                },
+                ".me/c/3755321415/1140)（中文）\n👉 [压缩包](https://t.me/c/3755321415/1139)（日文）"
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#茶虎"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉 "
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1140"
+                },
+                {
+                    "type": "plain",
+                    "text": "](https:"
+                },
+                {
+                    "type": "text_link",
+                    "text": "//t",
+                    "href": "https://t.me/c/3755321415/1139"
+                },
+                {
+                    "type": "plain",
+                    "text": ".me/c/3755321415/1140)（中文）\n👉 [压缩包](https://t.me/c/3755321415/1139)（日文）"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://files.catbox.moe/4fro60.jpg"
         }
     ]
 }
