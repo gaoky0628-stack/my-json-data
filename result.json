@@ -36083,6 +36083,21 @@
             "file": "(File not included...)",
             "file_size": 14367548,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1119,
+            "type": "message",
+            "date": "2026-04-15T06:42:03",
+            "date_unixtime": "1776235323",
+            "edited": "2026-04-15T06:42:06",
+            "edited_unixtime": "1776235326",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 6860570,
+            "mime_type": "application/zip"
         }
     ]
 }
