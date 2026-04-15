@@ -36893,6 +36893,48 @@
             "file": "(File not included...)",
             "file_size": 20897035,
             "mime_type": "application/zip"
+        },
+        {
+            "id": 1162,
+            "type": "message",
+            "date": "2026-04-15T14:59:19",
+            "date_unixtime": "1776265159",
+            "edited": "2026-04-15T14:59:22",
+            "edited_unixtime": "1776265162",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [
+                {
+                    "type": "hashtag",
+                    "text": "#トラトラ"
+                },
+                "\n\n👉",
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1161"
+                }
+            ],
+            "text_entities": [
+                {
+                    "type": "hashtag",
+                    "text": "#トラトラ"
+                },
+                {
+                    "type": "plain",
+                    "text": "\n\n👉"
+                },
+                {
+                    "type": "text_link",
+                    "text": "压缩包",
+                    "href": "https://t.me/c/3755321415/1161"
+                }
+            ],
+            "photo": "",
+            "photo_file_size": 0,
+            "width": 0,
+            "height": 0,
+            "image_url": "https://telegraph-image-5af.pages.dev/file/AgACAgUAAyEGAATnVjAKAAMmad-nzHVaOXNqRkrjtwzDBqWiUqUAAugQaxtkRPhWQMXqZTLwU6kBAAMCAAN5AAM7BA.jpg"
         }
     ]
 }
