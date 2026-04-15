@@ -35817,6 +35817,21 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/g0rkk0.jpg"
+        },
+        {
+            "id": 1109,
+            "type": "message",
+            "date": "2026-04-15T06:07:04",
+            "date_unixtime": "1776233224",
+            "edited": "2026-04-15T06:07:07",
+            "edited_unixtime": "1776233227",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 90646136,
+            "mime_type": "application/zip"
         }
     ]
 }
