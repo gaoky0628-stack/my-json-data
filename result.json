@@ -35703,6 +35703,21 @@
             "width": 0,
             "height": 0,
             "image_url": "https://files.catbox.moe/5l4ed6.jpg"
+        },
+        {
+            "id": 1105,
+            "type": "message",
+            "date": "2026-04-15T06:01:22",
+            "date_unixtime": "1776232882",
+            "edited": "2026-04-15T06:01:25",
+            "edited_unixtime": "1776232885",
+            "from": "自用",
+            "from_id": "channel3755321415",
+            "text": [],
+            "text_entities": [],
+            "file": "(File not included...)",
+            "file_size": 16887948,
+            "mime_type": "application/zip"
         }
     ]
 }
