@@ -1,0 +1,47 @@
+﻿@"
+# ---- 主程序（不提交） ----
+*.py
+*.pyw
+
+# ---- 敏感环境变量 ----
+.env
+*.session
+
+# ---- 运行状态与缓存 ----
+*.db
+*.log
+catchup_state.json
+reply_catchup_state.json
+cover_fail.log
+hash_verification_report.txt
+bot.log
+sync_state_tags.json
+*.bak
+
+# ---- 备份与媒体目录 ----
+photos/
+downloads/
+json/
+加密/
+备份/
+备份2/
+备份3/
+漫画7/
+*.zip
+UnRAR.exe
+
+# ---- Python 缓存 ----
+__pycache__/
+*.pyc
+
+# ---- 临时辅助脚本（忽略所有） ----
+*.py
+*.pyw
+
+# ---- 系统文件 ----
+Thumbs.db
+.DS_Store
+"@ | Out-File -Encoding utf8 .gitignore
+catchup_webp_state.json
+duplicates/
+how*
